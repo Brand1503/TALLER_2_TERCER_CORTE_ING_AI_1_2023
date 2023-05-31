@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int punto1(void);
+int main() {
+
+    int end = 1;
+    int opc = 0;
+    int sub_opc = 0;
+
+    while (end) {
+        printf("TALLER_2_TERCER_CORTE_ING_AI_1_2023 \n"); 
+        printf("[1]Punto 1\n");
+        printf("[2]Punto 2\n");
+        printf("[3]Punto 3\n");
+        printf("[4]Punto 4\n");
+        printf("[5]Punto 5\n");
+        printf("[6]Punto 6\n");
+        printf("[7]Punto 7\n");
+        printf("[8]Punto 8\n");
+        printf("[9]Punto 9\n");
+        printf("[10]Punto 10\n");
+        printf("[11]Punto 11\n");
+
+        scanf("%d", &opc);
+        system ("cls");
+        printf("ACABAS DE SELECCIONAR LA OPCIÓN: %d \n", opc);
+        if (opc == 1) {
+            punto1 (); 
+            scanf("%d", &sub_opc);
+            system ("cls");
+        } else if (opc == 2) {
+
+            system("cls");
+        } else if (opc == 3) {
+           printf("ACABAS DE CANCELAR, HASTA PRONTO... \n");
+           exit(1);
+       }
+
+    }
+    return 0;
+}
+int punto1(void)
+{
+    float a;
+    float b; 
+    float solucion; 
+    float pi = 3.141592; 
+
+    printf("Hola Necesitas hallar el volumen de un cono, por favor ingresa los siguientes datos:\n");
+    printf("Ingrese el valor del radio: \n");
+    scanf("%f", &a);
+    printf("Ingrese el valor de la altura: \n");
+    scanf("%f", &b);
+    solucion = pi*a*a*b/3;
+    printf("El volumen del cono es de %f",solucion);
+    return 0; 
+}
