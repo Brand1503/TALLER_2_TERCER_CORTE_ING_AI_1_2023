@@ -4,6 +4,7 @@
 int punto1(void);
 int finish(void);
 int punto2(void);
+int punto3(void);
 int main() {
 
     int end = 1;
@@ -36,10 +37,12 @@ int main() {
             finish ();
             system ("cls");
         } else if (opc == 3) {
-           printf("ACABAS DE CANCELAR, HASTA PRONTO... \n");
-           exit(1);
-       }
+            punto3 ();
+            finish ();
+            system ("cls");
+       } else if (opc == 4){
 
+       }
     }
     return 0;
 }
@@ -78,5 +81,20 @@ int punto2(void){
     scanf("%f",&GradosFahrenheit);
     solution = (float)5 / (float)9 * (GradosFahrenheit - 32); 
     printf("El resultado es %f grados Celsius  \n", solution);
+    return 0; 
+}int punto3(){
+    int segundos;
+    float minutos;
+    float horas; 
+    printf("Hola, hoy pasaremos el tiempo de segundos a minutos y a horas\n");
+    printf("Ingresa el valor del tiempo en segundos: \n");
+    scanf("%d", &segundos);
+    
+    minutos = (float)segundos /(float)60;
+    horas = (float)minutos /(float)60; 
+    printf("El valor es: \n");
+    printf("Segundos = %d\n",segundos);
+    printf("Minutos = %f\n",minutos);
+    printf("Horas = %f\n",horas);
     return 0; 
 }
