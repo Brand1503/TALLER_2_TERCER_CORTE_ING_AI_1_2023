@@ -5,6 +5,8 @@ int punto1(void);
 int finish(void);
 int punto2(void);
 int punto3(void);
+int punto4(void);
+int punto5(void);
 int main() {
 
     int end = 1;
@@ -41,8 +43,14 @@ int main() {
             finish ();
             system ("cls");
        } else if (opc == 4){
-
-       }
+        punto4 ();
+        finish ();
+        system ("cls");
+       }else if (opc == 5){
+        punto5 ();
+        finish ();
+        system ("cls");
+        }
     }
     return 0;
 }
@@ -89,7 +97,7 @@ int punto2(void){
     printf("Hola, hoy pasaremos el tiempo de segundos a minutos y a horas\n");
     printf("Ingresa el valor del tiempo en segundos: \n");
     scanf("%d", &segundos);
-    
+
     minutos = (float)segundos /(float)60;
     horas = (float)minutos /(float)60; 
     printf("El valor es: \n");
@@ -97,4 +105,35 @@ int punto2(void){
     printf("Minutos = %f\n",minutos);
     printf("Horas = %f\n",horas);
     return 0; 
+}int punto4(){
+    printf("falta");
+    return 0;
+}
+int punto5(){
+    int r;
+    int a;
+    int b;
+    int c;
+    int d;
+    float solucion; 
+
+    printf("Hola, hoy resolveremos la siguiente ecuacion \n4.0 / (3.0 * (r + 34)) - 9.0 * (a + b * c) + (3.0 + d * (2 + a)) / (a + b * d)");
+    printf("Ingrese el valor de r: \n");
+    scanf("%d",&r);
+    printf("Ingrese el valor de a: \n");
+    scanf("%d",&a);
+    printf("Ingrese el valor de b: \n");
+    scanf("%d",&b);
+    printf("Ingrese el valor de c: \n");
+    scanf("%d",&c);
+    printf("Ingrese el valor de d: \n");
+    scanf("%d",&d);
+
+    solucion= 4.0 / (3.0 * (r + 34)) - 9.0 * (a + b * c) + (3.0 + d * (2 + a)) / (a + b * d);
+    printf("la solucion de la formula es: %f\n", solucion); 
+
+    return 0; 
+}int punto6(){
+    printf("Hola");
+    return 0;
 }
