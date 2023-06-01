@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <math.h>
 int punto1(void);
+int finish(void);
+int punto2(void);
 int main() {
 
     int end = 1;
     int opc = 0;
-    int sub_opc = 0;
+
 
     while (end) {
         printf("TALLER_2_TERCER_CORTE_ING_AI_1_2023 \n"); 
@@ -24,14 +26,15 @@ int main() {
 
         scanf("%d", &opc);
         system ("cls");
-        printf("ACABAS DE SELECCIONAR LA OPCIÓN: %d \n", opc);
+
         if (opc == 1) {
             punto1 (); 
-            scanf("%d", &sub_opc);
+            finish (); 
             system ("cls");
         } else if (opc == 2) {
-
-            system("cls");
+            punto2 (); 
+            finish ();
+            system ("cls");
         } else if (opc == 3) {
            printf("ACABAS DE CANCELAR, HASTA PRONTO... \n");
            exit(1);
@@ -47,12 +50,33 @@ int punto1(void)
     float solucion; 
     float pi = 3.141592; 
 
-    printf("Hola Necesitas hallar el volumen de un cono, por favor ingresa los siguientes datos:\n");
+    printf("Hola Necesitas hallar el volumen de un cono. \nPor favor ingresa los siguientes datos:\n");
     printf("Ingrese el valor del radio: \n");
     scanf("%f", &a);
     printf("Ingrese el valor de la altura: \n");
     scanf("%f", &b);
     solucion = pi*a*a*b/3;
-    printf("El volumen del cono es de %f",solucion);
+    printf("El volumen del cono es de %f \n",solucion);
+    return 0; 
+}
+int finish (){    
+    int finish = 0;  
+    printf("DESEA SALIR (0) O REGRESAR AL MENU PRINCIPAL (1) ");
+    scanf("%d", &finish);
+    if(finish == 0){
+        exit(0);
+    }
+    return 0;
+
+}
+int punto2(void){
+    float GradosFahrenheit; 
+    float solution;
+
+    printf("Hola necesitas pasar de grados Fahrenheit y a grados Celsius \nPor favor ingresa los siguientes datos\n");
+    printf("ingrese el valor en grados Fahrenheit \n");
+    scanf("%f",&GradosFahrenheit);
+    solution = (float)5 / (float)9 * (GradosFahrenheit - 32); 
+    printf("El resultado es %f grados Celsius  \n", solution);
     return 0; 
 }
