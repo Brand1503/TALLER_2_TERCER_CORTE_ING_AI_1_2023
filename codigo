@@ -1,13 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-int punto1(void);
 int finish(void);
+int punto1(void);
 int punto2(void);
 int punto3(void);
 int punto4(void);
 int punto5(void);
 int punto6(void);
+int punto7(void);
+int punto8(void);
+int punto9(void);
+int punto10(void);
+int punto11(void);
+
 int main() {
 
     int end = 1;
@@ -52,6 +58,26 @@ int main() {
         finish ();
         system ("cls");
         }else if (opc ==6){
+            punto6 ();
+            finish ();
+            system ("cls");
+        }else if (opc ==7){
+            punto7 ();
+            finish ();
+            system ("cls");
+        }else if (opc ==8){
+            punto6 ();
+            finish ();
+            system ("cls");
+        }else if (opc ==9){
+            punto9 ();
+            finish ();
+            system ("cls");
+        }else if (opc ==10){
+            punto6 ();
+            finish ();
+            system ("cls");
+        }else if (opc ==11){
             punto6 ();
             finish ();
             system ("cls");
@@ -152,5 +178,38 @@ int punto5(){
     return 0;
 }
 int punto7(){
+    printf("hola mundo");
+    return 0;
+
+}int punto8(){
+    printf("hola mundo");
+    return 0;
+
+}int punto9(){
+    int ladoa; 
+    int ladob;
+    int angulo; 
+    double PI =3.141592;
+    float resultado; 
+    printf("Hola hoy hallaremos el area del triangulo mediante la ley del seno\n");
+    printf("Por favor ingresa el valor del lado a:\n");
+    scanf("%d", &ladoa);
+    printf("Ingresa el valor del lado b:\n");
+    scanf("%d", &ladob);
+    printf("Ingresa el valor del angulo formado en grados:\n");
+    scanf("%d", &angulo);
+
+    resultado = (1.0/2.0)*ladoa*ladob*sin((PI/180)*angulo);
+    printf("El area del triangulo es:%f \n", resultado);
     
+    return 0;
+
+}int punto10(){
+
+    printf("hola mundo");
+    return 0;
+
+}int punto11(){
+    printf("hola mundo");
+    return 0;
 }
