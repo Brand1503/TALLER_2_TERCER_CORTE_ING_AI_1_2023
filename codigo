@@ -78,7 +78,7 @@ int main() {
             finish ();
             system ("cls");
         }else if (opc ==11){
-            punto6 ();
+            punto11 ();
             finish ();
             system ("cls");
         }
@@ -205,11 +205,54 @@ int punto7(){
     return 0;
 
 }int punto10(){
+    int ladoa;
+    int ladob;
+    int angulo;
+    float resultado;
+    double PI =3.141592;
 
-    printf("hola mundo");
+    printf("Hallar el area de un triangulo");
+    printf("Ingresa el valor del lado a: \n");
+    scanf("%d", ladoa);
+    printf("Ingresa el valor del lado b: \n");
+    scanf("%d", ladob);
+    printf("Ingresa el valor del angulo formado en grados: \n");
+    scanf("%d",angulo); 
+    
+    resultado= (1.0/2.0)*ladoa*ladob*sin((PI/180)*angulo);
+    printf("El area del triangulo es:%f \n", resultado);
     return 0;
 
 }int punto11(){
-    printf("hola mundo");
+    float capital; 
+    float ratio;
+    int plazo;
+    float intereses; 
+    float cuota; 
+    float pagototal;
+    float interesestotales;
+    
+    printf("Hola vamos el valor de la cuota de un prestamo");
+    printf("ingresa los siguientes datos:\n");
+    printf("Valor del capital prestado: \n");
+    scanf("%f",&capital); 
+    printf("Porcentaje de los Intereses anuales: \n");
+    scanf("%f", &intereses);
+    printf("Cuantos años dura el prestamo:\n");
+    scanf("%d", &plazo);
+
+    plazo= plazo*12;
+    ratio= intereses /12.0;
+    cuota= (capital*ratio)/100.0*(1 - pow(1 + (ratio / 100),-plazo));
+    pagototal = cuota*plazo;
+
+    interesestotales = pagototal-capital;
+
+    printf("El valor total de la cuota mensual es de %.2f\n", cuota);
+    printf("el valor total pagado es de %.2f\n",pagototal);
+    printf("la cantidad del amortizacion es de %.2f\n", capital);
+    printf("el total de interes es de %.2f\n",interesestotales);
+
+
     return 0;
 }
