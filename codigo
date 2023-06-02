@@ -50,13 +50,13 @@ int main() {
             finish ();
             system ("cls");
        } else if (opc == 4){
-        punto4 ();
-        finish ();
-        system ("cls");
+            punto4 ();
+            finish ();
+            system ("cls");
        }else if (opc == 5){
-        punto5 ();
-        finish ();
-        system ("cls");
+            punto5 ();
+            finish ();
+            system ("cls");
         }else if (opc ==6){
             punto6 ();
             finish ();
@@ -66,7 +66,7 @@ int main() {
             finish ();
             system ("cls");
         }else if (opc ==8){
-            punto6 ();
+            punto8 ();
             finish ();
             system ("cls");
         }else if (opc ==9){
@@ -74,7 +74,7 @@ int main() {
             finish ();
             system ("cls");
         }else if (opc ==10){
-            punto6 ();
+            punto10 ();
             finish ();
             system ("cls");
         }else if (opc ==11){
@@ -84,6 +84,16 @@ int main() {
         }
     }
     return 0;
+}
+int finish (){    
+    int finish = 0;  
+    printf("DESEA SALIR (0) O REGRESAR AL MENU PRINCIPAL (1) ");
+    scanf("%d", &finish);
+    if(finish == 0){
+        exit(0);
+    }
+    return 0;
+
 }
 int punto1(void)
 {
@@ -100,16 +110,6 @@ int punto1(void)
     solucion = pi*a*a*b/3;
     printf("El volumen del cono es de %f \n",solucion);
     return 0; 
-}
-int finish (){    
-    int finish = 0;  
-    printf("DESEA SALIR (0) O REGRESAR AL MENU PRINCIPAL (1) ");
-    scanf("%d", &finish);
-    if(finish == 0){
-        exit(0);
-    }
-    return 0;
-
 }
 int punto2(void){
     float GradosFahrenheit; 
@@ -178,14 +178,73 @@ int punto5(){
     return 0;
 }
 int punto7(){
-    printf("hola mundo");
+    float sueldobase;
+    float complementodedestino;
+    float complementodecargoacademico;
+    int horasextras;
+    int hijos;
+    int mayoresdependientes;
+    float sueldobruto;
+    int horasextraspagas;
+    float irpf;
+    float sueldoneto;
+    int porcentjaIRPF;
+
+//solicto los valores necesarios
+    printf("Calcular la nomina de un empleado en el mes\n");
+    printf("Ingrese el valor del sueldo base:\n");
+    scanf("%f",&sueldobase);
+    printf("Ingrese el valor del complemento de destino:\n");
+    scanf("%f",&complementodedestino);
+    printf("ingrese el valor del complemento de cargo academico:\n");
+    scanf("%f",&complementodecargoacademico);
+    printf("Ingrese el valor de horas estras:\n");
+    scanf("%d",&horasextras);
+    printf("Ingrese cuantos hijos tiene:\n");
+    scanf("%d",&hijos);
+    printf("Ingrese cuantos mayores dependientes tiene:\n");
+    scanf("%d",&mayoresdependientes);
+    
+    horasextraspagas = horasextras * 23;// calculo el valor de las horas;
+    sueldobruto = sueldobase + complementodecargoacademico + complementodedestino + horasextraspagas;
+    porcentjaIRPF = 24 - (2 * hijos) - (1 * mayoresdependientes);
+    irpf = sueldobruto*porcentjaIRPF/100;
+    sueldoneto = sueldobruto - irpf;
+
+    printf("Calculo de nomina.\n");
+    printf("Sueldo bruto %.2f\n", sueldobruto);
+    printf("Porcentaje de IRPF:%d%%\n", porcentjaIRPF);
+    printf("Retencion por IRPF:%.2f\n", irpf);
+    printf("Sueldo neto:%.2f\n",sueldoneto);
+
+
     return 0;
 
 }int punto8(){
-    printf("hola mundo");
-    return 0;
+    int a = 1;
+    double d = 1.0;
 
-}int punto9(){
+    a = 46 % 9 + 4 * 4 - 2;
+    printf("1 - Resultado: %d\n", a);
+
+    a = 45 + 43 % 5 * (23 * 3 % 2);
+    printf("2 - Resultado: %d\n", a);
+
+    a = 45 + 45 * 50 % a--;
+    printf("3 - Resultado: %d\n", a);
+
+    d = 1.5 * 3 + (++d);
+    printf("4 - Resultado: %.2f\n", d);
+
+    d = 1.5 * 3 + d++;
+    printf("5 - Resultado: %.2f\n", d);
+
+    a %= 3 / a + 3;
+    printf("6 - Resultado: %d\n", a);
+
+    return 0;
+}
+int punto9(){
     int ladoa; 
     int ladob;
     int angulo; 
@@ -210,17 +269,20 @@ int punto7(){
     int angulo;
     float resultado;
     double PI =3.141592;
+    float anguloradianes;
 
-    printf("Hallar el area de un triangulo");
+    printf("Hallar el angunlo en radianes: \n");
     printf("Ingresa el valor del lado a: \n");
-    scanf("%d", ladoa);
+    scanf("%d", &ladoa);
     printf("Ingresa el valor del lado b: \n");
-    scanf("%d", ladob);
+    scanf("%d", &ladob);
     printf("Ingresa el valor del angulo formado en grados: \n");
-    scanf("%d",angulo); 
+    scanf("%d",&angulo); 
     
     resultado= (1.0/2.0)*ladoa*ladob*sin((PI/180)*angulo);
-    printf("El area del triangulo es:%f \n", resultado);
+    anguloradianes = (PI/180)*angulo;
+
+    printf("El angulo en radianes del triangulo es:%f \n", anguloradianes);
     return 0;
 
 }int punto11(){
@@ -256,3 +318,4 @@ int punto7(){
 
     return 0;
 }
+
