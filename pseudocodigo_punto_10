@@ -1,0 +1,23 @@
+Algoritmo punto10
+    Definir ladoa como entero
+    Definir ladob como entero
+    Definir angulo como entero
+    Definir resultado como real
+    Definir PII como real
+    Definir anguloradianes como real
+    
+    PII <- 3.141592
+    Escribir "Hallar el ángulo en radianes:"
+    Escribir "Ingresa el valor del lado a:"
+    Leer ladoa
+    Escribir "Ingresa el valor del lado b:"
+    Leer ladob
+    Escribir "Ingresa el valor del ángulo formado en grados:"
+    Leer angulo
+    
+    resultado <- (1.0 / 2.0) * ladoa * ladob * Sen((PII / 180) * angulo)
+    anguloradianes <- (PII / 180) * angulo
+    
+    Escribir "El ángulo en radianes del triángulo es: ", anguloradianes
+    
+FinAlgoritmo
