@@ -145,7 +145,7 @@ int punto2(void){
     float nota30;
     float nota100;
     
-    printf("HALLAR LA NOT DEFINITIVA \n");
+    printf("HALLAR LA NOTA DEFINITIVA \n");
     printf("Ingresa las notas definitivas:\n");
     printf("Nota del Parcial 1: \n");
     scanf("%f",&parcialPR1);
@@ -237,6 +237,7 @@ int punto7(){
     porcentjaIRPF = 24 - (2 * hijos) - (1 * mayoresdependientes);
     irpf = sueldobruto*porcentjaIRPF/100;
     sueldoneto = sueldobruto - irpf;
+    system("cls");
 
     printf("Calculo de nomina.\n");
     printf("Sueldo bruto %.2f\n", sueldobruto);
@@ -255,7 +256,7 @@ int punto7(){
     printf("1: %d\n", a);
 
     a = 45 + 43 % 5 * (23 * 3 % 2);
-    printf("2 -: %d\n", a);
+    printf("2: %d\n", a);
 
     a = 45 + 45 * 50 % a--;
     printf("3: %d\n", a);
@@ -321,7 +322,7 @@ int punto9(){
     float pagototal;
     float interesestotales;
     
-    printf("Hola vamos el valor de la cuota de un prestamo");
+    printf("Hola vamos el valor de la cuota de un prestamo\n");
     printf("ingresa los siguientes datos:\n");
     printf("Valor del capital prestado: \n");
     scanf("%f",&capital); 
