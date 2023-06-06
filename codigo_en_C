@@ -105,7 +105,7 @@ int punto1(void)
     printf("Hola el volumen de un cono. \n");
     printf("el valor del radio es de %.2f \n",a);
     printf("el valor de la altura es de %.2f \n",b);
-    solucion = pi*a*a*b/3;
+    solucion = (pi*a*a*b)/3;
     printf("El volumen del cono es de %f \n",solucion);
     return 0; 
 }
@@ -262,12 +262,12 @@ int punto7(){
     printf("3: %d\n", a);
 
     d = 1.5 * 3 + (++d);
-    printf("4: %.2f\n", d);
+    printf("4: %f\n", d);
 
     d = 1.5 * 3 + d++;
-    printf("5: %.2f\n", d);
+    printf("5: %f\n", d);
 
-    a %= 3 / a + 3;
+    a= a % (3 / a + 3);
     printf("6: %d\n", a);
 
     return 0;
@@ -306,11 +306,11 @@ int punto9(){
     scanf("%d", &ladob);
     printf("Ingresa el valor del angulo formado en grados: \n");
     scanf("%d",&angulo); 
-    
-    resultado= (1.0/2.0)*ladoa*ladob*sin((PI/180)*angulo);
     anguloradianes = (PI/180)*angulo;
-
-    printf("El angulo en radianes del triangulo es:%f \n", anguloradianes);
+    resultado= (1.0/2.0)*ladoa*ladob*sin(anguloradianes);
+    
+    
+    printf("El area del triangulo es:%f \n", resultado);
     return 0;
 
 }int punto11(){
