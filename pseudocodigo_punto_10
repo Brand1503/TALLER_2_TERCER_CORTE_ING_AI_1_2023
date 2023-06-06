@@ -14,10 +14,10 @@ Algoritmo punto10
     Leer ladob
     Escribir "Ingresa el valor del ángulo formado en grados:"
     Leer angulo
-    
-    resultado <- (1.0 / 2.0) * ladoa * ladob * Sen((PII / 180) * angulo)
     anguloradianes <- (PII / 180) * angulo
+    resultado <- (1.0 / 2.0) * ladoa * ladob * Sen(anguloradianes)
     
-    Escribir "El ángulo en radianes del triángulo es: ", anguloradianes
+    
+    Escribir "El area del triángulo es: ", resultado
     
 FinAlgoritmo
